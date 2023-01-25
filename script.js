@@ -1,16 +1,13 @@
-//your code here
-const inputTodo = document.getElementById('newTodoInput');
-const todoList = document.getElementById('todoList');
-const addHandler = () => {
-    if (inputTodo.value.trim() === "") {
-        return;
-    }
-    const node = document.createElement('li');
-    const textNode = document.createTextNode(inputTodo.value);
-    node.appendChild(textNode);
-    todoList.appendChild(node);
-    inputTodo.innerText = "";
-    inputTodo.innerHTML = "";
-    inputTodo.value = "";
+let orderedList = document.getElementById("todoList")
+let list = document.getElementById("newTodoInput")
 
+
+function adding(){
+	if(list.value != ""){
+		let newList = document.createElement("li");
+		newList.innerHTML = list.value
+		orderedList.appendChild(newList)
+		list.value = "";
+	}
+	
 }
