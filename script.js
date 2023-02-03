@@ -1,16 +1,12 @@
-const newTodoInput = document.getElementById("newTodoInput");
-const addTodoBtn = document.getElementById("addTodoBtn");
-const todoList = document.getElementById("todoList");
-
-addTodoBtn.addEventListener("click", function() {
-    let todo = newTodoInput.value;
-    if(!todo.trim()){
-    alert("Please enter a valid todo item");
-    return;
-    }
-    let newTodo = document.createElement("li");
-    newTodo.innerHTML = todo;
-    todoList.appendChild(newTodo);
-    newTodoInput.value = "";
-});
+let btn=document.getElementById("addTodoBtn")
+btn.addEventListener("click",funcall)
+function funcall(){
+	if(document.getElementById("newTodoInput").value!=""){
+	    let store=document.createElement("li")
+	    store.innerText=document.getElementById("newTodoInput").value
+        todoList.appendChild(store)
+	}
+    else alert("write something")
+	document.getElementById("newTodoInput").value=""
+}
 
